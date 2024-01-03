@@ -1,7 +1,8 @@
+import os
 import sys
 import sqlalchemy
 
-_conn_string = "postgresql://tdi:qKmd8s5ze7WAYV@adventureworks.tditrain.com:5431/wells"
+_conn_string = os.getenv('DB_URL')
 
 def query_db(mindepth, mingradient):
     engine = sqlalchemy.create_engine(_conn_string)
