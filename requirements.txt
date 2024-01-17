@@ -2,3 +2,5 @@ greenlet==3.0.2
 psycopg2==2.9.9
 SQLAlchemy==2.0.23
 typing_extensions==4.9.0
+vega_datasets
+streamlit
