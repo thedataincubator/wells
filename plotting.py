@@ -22,7 +22,12 @@ def plot_wells(coords):
         color='steelblue'
     ).encode(
         longitude='longitude:Q',
-        latitude='latitude:Q'
+        latitude='latitude:Q',
+        color=alt.Color('gradient:Q', scale=alt.Scale(scheme='inferno')),
+        tooltip=[
+            alt.Tooltip('depth:Q', title='Depth (m)'),
+            alt.Tooltip('gradient:Q', title='Gradient (°C/m)', format='0.3f')
+        ]
     )
 
     return background + points
